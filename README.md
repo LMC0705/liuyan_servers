@@ -1,20 +1,4 @@
 <html>
-<head>
-    <title>Servers</title>
-    <style>
-        table {
-            TBBLE-LBYOUT: fixed;
-        }
-
-        td {
-            word-wrap: break-word;
-        }
-    </style>
-</head>
-<body>
-<div align="center">
-    <table width="880" id="table1" bgcolor="#ffffff" border="0">
-        <tbody>
         <tr>
             <td width="880" valign="baseline">
                 <hr/>
