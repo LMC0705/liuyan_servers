@@ -17,31 +17,31 @@
         }
 
         .container {
-            max-width: 1180px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 40px 20px 60px;
+            padding: 30px 18px 50px;
         }
 
         .header {
             text-align: center;
             background: #ffffff;
-            border-radius: 18px;
-            padding: 28px 20px;
-            box-shadow: 0 8px 28px rgba(31, 41, 55, 0.08);
-            margin-bottom: 30px;
+            border-radius: 16px;
+            padding: 22px 18px;
+            box-shadow: 0 6px 20px rgba(31, 41, 55, 0.08);
+            margin-bottom: 24px;
             border: 1px solid #e5e7eb;
         }
 
         .header h1 {
             margin: 0;
-            font-size: 34px;
+            font-size: 30px;
             color: #133c8b;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.2px;
         }
 
         .header p {
-            margin: 12px 0 0;
-            font-size: 17px;
+            margin: 10px 0 0;
+            font-size: 16px;
             color: #4b5563;
         }
 
@@ -52,34 +52,35 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
         }
 
         .card {
-            display: flex;
-            gap: 18px;
             background: #ffffff;
-            border-radius: 18px;
-            padding: 18px;
-            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+            border-radius: 16px;
+            padding: 14px;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
             border: 1px solid #e6edf5;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.10);
         }
 
         .thumb {
-            flex: 0 0 150px;
+            width: 100%;
+            margin-bottom: 12px;
         }
 
         .thumb img {
-            width: 150px;
-            height: 170px;
+            width: 100%;
+            height: 185px;
             object-fit: cover;
             border-radius: 12px;
             border: 1px solid #c7d7f0;
@@ -93,8 +94,8 @@
         }
 
         .title {
-            margin: 0 0 10px;
-            font-size: 22px;
+            margin: 0 0 8px;
+            font-size: 20px;
             line-height: 1.25;
         }
 
@@ -108,15 +109,15 @@
         }
 
         .meta {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .tag {
             display: inline-block;
-            padding: 4px 10px;
-            margin: 0 8px 8px 0;
+            padding: 3px 9px;
+            margin: 0 6px 6px 0;
             border-radius: 999px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: bold;
             background: #eaf2ff;
             color: #174ea6;
@@ -124,9 +125,9 @@
         }
 
         .info {
-            margin: 8px 0;
-            font-size: 14px;
-            line-height: 1.7;
+            margin: 6px 0;
+            font-size: 13px;
+            line-height: 1.6;
             color: #374151;
         }
 
@@ -148,38 +149,27 @@
         .footer-note {
             text-align: center;
             color: #6b7280;
-            font-size: 13px;
-            margin-top: 28px;
+            font-size: 12px;
+            margin-top: 24px;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1024px) {
             .grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
         @media (max-width: 640px) {
-            .card {
-                flex-direction: column;
-                align-items: center;
-                text-align: left;
-            }
-
-            .thumb {
-                flex: none;
-            }
-
-            .thumb img {
-                width: 180px;
-                height: 200px;
-            }
-
-            .content {
-                width: 100%;
+            .grid {
+                grid-template-columns: 1fr;
             }
 
             .header h1 {
-                font-size: 28px;
+                font-size: 26px;
+            }
+
+            .thumb img {
+                height: 200px;
             }
         }
     </style>
@@ -198,9 +188,7 @@
                 <img src="./images/tripletcell.png" alt="TripletCell">
             </div>
             <div class="content">
-                <h2 class="title">
-                    <a href="https://github.com/liuyan3056/TripletCell" target="_blank">TripletCell</a>
-                </h2>
+                <h2 class="title"><a href="https://github.com/liuyan3056/TripletCell" target="_blank">TripletCell</a></h2>
                 <div class="meta">
                     <span class="tag">Cell Type Prediction</span>
                     <span class="tag">2023</span>
@@ -216,9 +204,7 @@
                 <img src="./images/scMDR.png" alt="scMDR">
             </div>
             <div class="content">
-                <h2 class="title">
-                    <a href="https://github.com/LMC0705/annotate_celltype" target="_blank">scMDR</a>
-                </h2>
+                <h2 class="title"><a href="https://github.com/LMC0705/annotate_celltype" target="_blank">scMDR</a></h2>
                 <div class="meta">
                     <span class="tag">Cell Type Prediction</span>
                     <span class="tag">2023</span>
@@ -234,9 +220,7 @@
                 <img src="./images/vggfold.png" alt="VGGFold">
             </div>
             <div class="content">
-                <h2 class="title">
-                    <a href="https://csbio.njust.edu.cn/bioinf/vggfold/" target="_blank">VGGFold</a>
-                </h2>
+                <h2 class="title"><a href="https://csbio.njust.edu.cn/bioinf/vggfold/" target="_blank">VGGFold</a></h2>
                 <div class="meta">
                     <span class="tag">Protein Fold Prediction</span>
                     <span class="tag">2021</span>
@@ -252,9 +236,7 @@
                 <img src="./images/FoldTR.png" alt="FoldTR">
             </div>
             <div class="content">
-                <h2 class="title">
-                    <a href="https://csbio.njust.edu.cn/bioinf/foldtr/" target="_blank">FoldTR</a>
-                </h2>
+                <h2 class="title"><a href="https://csbio.njust.edu.cn/bioinf/foldtr/" target="_blank">FoldTR</a></h2>
                 <div class="meta">
                     <span class="tag">Protein Fold Prediction</span>
                     <span class="tag">2021</span>
@@ -270,9 +252,7 @@
                 <img src="./images/SAResNet.png" alt="SAResNet">
             </div>
             <div class="content">
-                <h2 class="title">
-                    <a href="https://csbio.njust.edu.cn/bioinf/saresnet/" target="_blank">SAResNet</a>
-                </h2>
+                <h2 class="title"><a href="https://csbio.njust.edu.cn/bioinf/saresnet/" target="_blank">SAResNet</a></h2>
                 <div class="meta">
                     <span class="tag">DNA-Protein Binding</span>
                     <span class="tag">2021</span>
@@ -288,9 +268,7 @@
                 <img src="./images/TripletGO.png" alt="TripletGO">
             </div>
             <div class="content">
-                <h2 class="title">
-                    <a href="https://zhanggroup.org/TripletGO/" target="_blank">TripletGO</a>
-                </h2>
+                <h2 class="title"><a href="https://zhanggroup.org/TripletGO/" target="_blank">TripletGO</a></h2>
                 <div class="meta">
                     <span class="tag">Protein Function Prediction</span>
                     <span class="tag">2022</span>
@@ -306,9 +284,7 @@
                 <img src="./images/NPCFold.png" alt="NPCFold">
             </div>
             <div class="content">
-                <h2 class="title">
-                    <a href="https://github.com/zhuguanyu123/NPCFold" target="_blank">NPCFold</a>
-                </h2>
+                <h2 class="title"><a href="https://github.com/zhuguanyu123/NPCFold" target="_blank">NPCFold</a></h2>
                 <div class="meta">
                     <span class="tag">Protein Fold Recognition</span>
                     <span class="tag">2022</span>
@@ -324,9 +300,7 @@
                 <img src="./images/GMPGRN.png" alt="GMFGRN">
             </div>
             <div class="content">
-                <h2 class="title">
-                    <a href="https://github.com/Truth123/GCmapCrys" target="_blank">GMFGRN</a>
-                </h2>
+                <h2 class="title"><a href="https://github.com/Truth123/GCmapCrys" target="_blank">GMFGRN</a></h2>
                 <div class="meta">
                     <span class="tag">Gene Regulatory Network Inference</span>
                     <span class="tag">2023</span>
@@ -342,9 +316,7 @@
                 <img src="./images/seqalign.png" alt="seqAlignATAC">
             </div>
             <div class="content">
-                <h2 class="title">
-                    <a href="https://github.com/BioCS-Lab/seqAlignATAC" target="_blank">seqAlignATAC</a>
-                </h2>
+                <h2 class="title"><a href="https://github.com/BioCS-Lab/seqAlignATAC" target="_blank">seqAlignATAC</a></h2>
                 <div class="meta">
                     <span class="tag">Cell Type Identification</span>
                     <span class="tag">2026</span>
@@ -360,9 +332,7 @@
                 <img src="./images/CellpredX.png" alt="CellPredX">
             </div>
             <div class="content">
-                <h2 class="title">
-                    <a href="https://github.com/BioCS-Lab/CellPredX" target="_blank">CellPredX</a>
-                </h2>
+                <h2 class="title"><a href="https://github.com/BioCS-Lab/CellPredX" target="_blank">CellPredX</a></h2>
                 <div class="meta">
                     <span class="tag">Cell Type Annotation</span>
                     <span class="tag">2026</span>
