@@ -1,378 +1,383 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Servers</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioinformatics Servers</title>
     <style>
-        table {
-            TBBLE-LBYOUT: fixed;
+        * {
+            box-sizing: border-box;
         }
 
-        td {
-            word-wrap: break-word;
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            background: linear-gradient(180deg, #f7f9fc 0%, #eef3f9 100%);
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        .header {
+            text-align: center;
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 28px 20px;
+            box-shadow: 0 8px 28px rgba(31, 41, 55, 0.08);
+            margin-bottom: 30px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 34px;
+            color: #133c8b;
+            letter-spacing: 0.3px;
+        }
+
+        .header p {
+            margin: 12px 0 0;
+            font-size: 17px;
+            color: #4b5563;
+        }
+
+        .count {
+            color: #0f4fbf;
+            font-weight: bold;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            display: flex;
+            gap: 18px;
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+            border: 1px solid #e6edf5;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            align-items: flex-start;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+        }
+
+        .thumb {
+            flex: 0 0 150px;
+        }
+
+        .thumb img {
+            width: 150px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid #c7d7f0;
+            background: #f8fbff;
+            display: block;
+        }
+
+        .content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .title {
+            margin: 0 0 10px;
+            font-size: 22px;
+            line-height: 1.25;
+        }
+
+        .title a {
+            color: #0f4fbf;
+            text-decoration: none;
+        }
+
+        .title a:hover {
+            text-decoration: underline;
+        }
+
+        .meta {
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            margin: 0 8px 8px 0;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: bold;
+            background: #eaf2ff;
+            color: #174ea6;
+            border: 1px solid #cfe0ff;
+        }
+
+        .info {
+            margin: 8px 0;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #374151;
+        }
+
+        .label {
+            color: #0f4fbf;
+            font-weight: bold;
+        }
+
+        .doi a {
+            color: #0f4fbf;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .doi a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-note {
+            text-align: center;
+            color: #6b7280;
+            font-size: 13px;
+            margin-top: 28px;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .card {
+                flex-direction: column;
+                align-items: center;
+                text-align: left;
+            }
+
+            .thumb {
+                flex: none;
+            }
+
+            .thumb img {
+                width: 180px;
+                height: 200px;
+            }
+
+            .content {
+                width: 100%;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 <body>
-<div align="center">
-    <table width="880" id="table1" bgcolor="#ffffff" border="0">
-        <tbody>
-        <tr>
-            <td width="880" valign="baseline">
-                <hr/>
-            </td>
-        </tr>
-        <tr>
-            <td width="880" valign="middle" halign="left">
-						<span style="font-family:georgia;font-size:18px;">
-							<a name="Publications_">Bioinformatics Servers</a>&nbsp;(<strong>10</strong> Servers), Programmed by Yan Liu</span></strong>
-                </span>
-                <hr/>
-            </td>
-        </tr>
-        <!-- xxxx -->
-        <tr>
-            <td width="880">
-                <table width="880" border="0">
-                    <tbody>
-                    <tr>
-                        <td>
-                            <img width="137" height="157"
-                                 style="border:1px solid #0000ff;border-image:none;width:137px;height:157px;padding-top:1px;padding-bottom:1px;"
-                                 src="./images/tripletcell.png" border="0" vspace="0" hspace="0"/>
-                        </td>
-                        <td width="285" align="center">
-                            <p style="text-align:left;">
-														<span style="font-family:georgia;font-size:12px;">
-															<span style="color:#0000ff;">
-																<a style="color:#0000ff;" href="https://github.com/liuyan3056/TripletCell" target="_blank"><strong>TripletCell</strong></a>
-															</span>
-															<br/>
-															<span style="color:#0000ff;"><strong>Category</strong>: </span>[Cell Type Prediction]
-															<br/>
-															<span style="color:#0000ff;"><strong>Description</span></strong>: TripletCell: a deep metric learning framework for accurate annotation of cell types at the single-cell level
-															<br/>
-															<span style="color:#0000ff;"><strong>Journal</strong></span>: <strong>Briefings in Bioinformatics</strong>
-															<br/>
-															<span style="color:#0000ff;">
-																<strong>
-																	<a href="https://doi.org/10.1093/bib/bbad132" target=_blank>DOI:</a>
-																</strong>
-															</span>&nbsp;10.1093/bib/bbad132
-															<br/>
-															<span style="color:#0000ff;"><strong>Year</strong></span>: <strong>2023</strong>
-														</span>
-                            </p>
-                        </td>
-                        <td>
-                            <img width="137" height="157"
-                                 style="border:1px solid #0000ff;border-image:none;width:137px;height:157px;padding-top:1px;padding-bottom:1px;"
-                                 src="./images/scMDR.png" border="0" vspace="0" hspace="0"/>
-                        </td>
-                        <td width="285" style="text-align:left;">
-                            <p style="text-align:left;">
-										<span style="font-family:georgia;font-size:12px;">
-											<span style="color:#0000ff;">
-												<a style="color:#0000ff;"
-                                                   href="https://github.com/LMC0705/annotate_celltype" target="_blank"><strong>scMDR</strong></a>
-											</span>
-											<br/>
-											<span style="color:#0000ff;"><strong>Category</strong>: </span>[Cell Type Prediction]
-											<br/>
-											<span style="color:#0000ff;"><strong>Description</span></strong>: Learning Cell Annotation under Multiple Reference Datasets by Multi-source Domain Adaptation
-											<br/>
-											<span style="color:#0000ff;"><strong>Journal</strong></span>: <strong>Journal of Chemical Information and Modeling</strong>
-											<br/>
-											<span style="color:#0000ff;">
-												<strong>
-													<a href="https://doi.org/10.1021/acs.jcim.2c01277" target=_blank>DOI:</a>
-												</strong>
-											</span>&nbsp;10.1021/acs.jcim.2c01277
-											<br/>
-											<span style="color:#0000ff;"><strong>Year</strong></span>: <strong>2023</strong>
-										</span>
-                            </p>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <!-- xxxx -->
-        <tr>
-            <td width="880">
-                <table width="880" border="0">
-                    <tbody>
-                    <tr>
-                        <td>
-                            <img width="137" height="157"
-                                 style="border:1px solid #0000ff;border-image:none;width:137px;height:157px;padding-top:1px;padding-bottom:1px;"
-                                 src="./images/vggfold.png" border="0" vspace="0" hspace="0"/>
-                        </td>
-                        <td width="285" align="center">
-                            <p style="text-align:left;">
-										<span style="font-family:georgia;font-size:12px;">
-											<span style="color:#0000ff;">
-												<a style="color:#0000ff;" href="https://csbio.njust.edu.cn/bioinf/vggfold/"
-                                                   target="_blank"><strong>VGGFold</strong></a>
-											</span>
-											<br/>
-											<span style="color:#0000ff;"><strong>Category</strong>: </span>[Protein fold prediction]
-											<br/>
-											<span style="color:#0000ff;"><strong>Description</span></strong>: Why can deep convolutional neural networks improve protein fold recognition? A visual explanation by interpretation
-											<br/>
-<span style="color:#0000ff;"><strong>Journal</strong></span>: <strong>Briefings in Bioinformatics</strong>
-											<br/>
-											<span style="color:#0000ff;">
-												<strong>
-													<a href="https://doi.org/10.1093/bib/bbab001" target=_blank>DOI:</a>
-												</strong>
-											</span>&nbsp;10.1093/bib/bbab001
-											<br/>
-											<span style="color:#0000ff;"><strong>Year</strong></span>: <strong>2021</strong>
-										</span>
-                            </p>
-                        </td>
-                        <td>
-                            <img width="137" height="157"
-                                 style="border:1px solid #0000ff;border-image:none;width:137px;height:157px;padding-top:1px;padding-bottom:1px;"
-                                 src="./images/FoldTR.png" border="0" vspace="0" hspace="0"/>
-                        </td>
-                        <td width="285" style="text-align:left;">
-                            <p style="text-align:left;">
-										<span style="font-family:georgia;font-size:12px;">
-											<span style="color:#0000ff;">
-												<a style="color:#0000ff;"
-                                                   href="https://csbio.njust.edu.cn/bioinf/foldtr/" target="_blank"><strong>FoldTR</strong></a>
-											</span>
-											<br/>
-											<span style="color:#0000ff;"><strong>Category</strong>: </span>[Protein fold prediction]
-											<br/>
-											<span style="color:#0000ff;"><strong>Description</span></strong>: Improving protein fold recognition using triplet network and ensemble deep learning
-											<br/>
-											<span style="color:#0000ff;"><strong>Journal</strong></span>: <strong>Briefings in Bioinformatics</strong>
-											<br/>
-											<span style="color:#0000ff;">
-												<strong>
-													<a href="https://doi.org/10.1093/bib/bbab248" target=_blank>DOI:</a>
-												</strong>
-											</span>&nbsp;10.1093/bib/bbab248
-											<br/>
-											<span style="color:#0000ff;"><strong>Year</strong></span>: <strong>2021</strong>
-										</span>
-                            </p>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <!-- xxxx -->
-        <tr>
-            <td width="880">
-                <table width="880" border="0">
-                    <tbody>
-                    <tr>
-                        <td>
-                            <img width="137" height="157"
-                                 style="border:1px solid #0000ff;border-image:none;width:137px;height:157px;padding-top:1px;padding-bottom:1px;"
-                                 src="./images/SAResNet.png" border="0" vspace="0" hspace="0"/>
-                        </td>
-                        <td width="285" align="center">
-                            <p style="text-align:left;">
-										<span style="font-family:georgia;font-size:12px;">
-											<span style="color:#0000ff;">
-												<a style="color:#0000ff;" href="https://csbio.njust.edu.cn/bioinf/saresnet/"
-                                                   target="_blank"><strong>SAResNet</strong></a>
-											</span>
-											<br/>
-											<span style="color:#0000ff;"><strong>Category</strong>: </span>[DNA-Protein binding]
-											<br/>
-											<span style="color:#0000ff;"><strong>Description</span></strong>: SAResNet: self-attention residual network for predicting DNA-protein binding
-											<br/>
-											<span style="color:#0000ff;"><strong>Journal</strong></span>: <strong>Briefings in Bioinformatics</strong>
-											<br/>
-											<span style="color:#0000ff;">
-												<strong>
-													<a href="https://doi.org/10.1093/bib/bbab101" target=_blank>DOI:</a>
-												</strong>
-											</span>&nbsp;10.1093/bib/bbab101
-											<br/>
-											<span style="color:#0000ff;"><strong>Year</strong></span>: <strong>2021</strong>
-										</span>
-                            </p>
-                        </td>
-                        <td>
-                            <img width="137" height="157"
-                                 style="border:1px solid #0000ff;border-image:none;width:137px;height:157px;padding-top:1px;padding-bottom:1px;"
-                                 src="./images/TripletGO.png" border="0" vspace="0" hspace="0"/>
-                        </td>
-                        <td width="285" style="text-align:left;">
-                            <p style="text-align:left;">
-										<span style="font-family:georgia;font-size:12px;">
-											<span style="color:#0000ff;">
-												<a style="color:#0000ff;"
-                                                   href="https://zhanggroup.org/TripletGO/" target="_blank"><strong>TripletGO</strong></a>
-											</span>
-											<br/>
-											<span style="color:#0000ff;"><strong>Category</strong>: </span>[Protein function prediction]
-											<br/>
-											<span style="color:#0000ff;"><strong>Description</span></strong>: Integrating Transcript Expression Profiles with Protein Homology Inferences for Gene Function Prediction
-											<br/>
-											<span style="color:#0000ff;"><strong>Journal</strong></span>: <strong>Genomics Proteomics Bioinformatics</strong>
-											<br/>
-											<span style="color:#0000ff;">
-												<strong>
-													<a href="https://doi.org/10.1016/j.gpb.2022.03.001" target=_blank>DOI:</a>
-												</strong>
-											</span>&nbsp;10.1016/j.gpb.2022.03.001
-											<br/>
-											<span style="color:#0000ff;"><strong>Year</strong></span>: <strong>2022</strong>
-										</span>
-                            </p>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <!-- xxxx -->
-        <tr>
-            <td width="880">
-                <table width="880" border="0">
-                    <tbody>
-                    <tr>
-                        <td>
-                            <img width="137" height="157"
-                                 style="border:1px solid #0000ff;border-image:none;width:137px;height:157px;padding-top:1px;padding-bottom:1px;"
-                                 src="./images/NPCFold.png" border="0" vspace="0" hspace="0"/>
-                        </td>
-                        <td width="285" align="center">
-                            <p style="text-align:left;">
-										<span style="font-family:georgia;font-size:12px;">
-											<span style="color:#0000ff;">
-												<a style="color:#0000ff;" href="https://github.com/zhuguanyu123/NPCFold"
-                                                   target="_blank"><strong>NPCFold</strong></a>
-											</span>
-											<br/>
-											<span style="color:#0000ff;"><strong>Category</strong>: </span>[Protein fold recognition]
-											<br/>
-											<span style="color:#0000ff;"><strong>Description</span></strong>: Learning Protein Embedding to Improve Protein Fold Recognition Using Deep Metric Learning
-											<br>
-											<span style="color:#0000ff;"><strong>Journal</strong></span>: <strong>Journal of Chemical Information and Modeling</strong>
-											<br/>
-											<span style="color:#0000ff;"><strong><a
-                                                    href="https://doi.org/10.1021/acs.jcim.2c00959"
-                                                    target=_blank>DOI:</a></strong></span>&nbsp;10.1021/acs.jcim.2c00959
-											<br/>
-											<span style="color:#0000ff;"><strong>Year</strong></span>: <strong>2022</strong>
-										</span>
-                            </p>
-                        </td>
-                        <td>
-                            <img width="137" height="157"
-                                 style="border:1px solid #0000ff;border-image:none;width:137px;height:157px;padding-top:1px;padding-bottom:1px;"
-                                 src="./images/GMPGRN.png" border="0" vspace="0" hspace="0"/>
-                        </td>
-                        <td width="285" style="text-align:left;">
-                            <p style="text-align:left;">
-										<span style="font-family:georgia;font-size:12px;">
-											<span style="color:#0000ff;">
-												<a style="color:#0000ff;"
-                                                   href="https://github.com/Truth123/GCmapCrys"
-                                                   target="_blank"><strong>GMFGRN</strong></a>
-											</span>
-											<br/>
-											<span style="color:#0000ff;"><strong>Category</strong>: </span>[Gene Regulatory network Inference]
-											<br/>
-											<span style="color:#0000ff;"><strong>Description</span></strong>: GMFGRN: a matrix factorization and graph neural network approach for gene regulatory network inference
-											<br/>
-											<span style="color:#0000ff;"><strong>Journal</strong></span>: <strong>Briefings in Bioinformatics</strong>
-											<br/>
-											<span style="color:#0000ff;"><strong><a
-                                                    href="https://doi.org/10.1093/bib/bbad529"
-                                                    target=_blank>DOI:</a></strong></span>&nbsp;10.1093/bib/bbad529
-											<br/>
-											<span style="color:#0000ff;"><strong>Year</strong></span>: <strong>2023</strong>
-										</span>
-                            </p>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <!-- xxxx -->
-        <tr>
-            <td width="880">
-                <table width="880" border="0">
-                    <tbody>
-                    <tr>
-                        <td>
-                            <img width="137" height="157"
-                                 style="border:1px solid #0000ff;border-image:none;width:137px;height:157px;padding-top:1px;padding-bottom:1px;"
-                                 src="./images/seqalign.png" border="0" vspace="0" hspace="0"/>
-                        </td>
-                        <td width="285" align="center">
-                            <p style="text-align:left;">
-										<span style="font-family:georgia;font-size:12px;">
-											<span style="color:#0000ff;">
-												<a style="color:#0000ff;" href="https://github.com/BioCS-Lab/seqAlignATAC"
-                                                   target="_blank"><strong>seqAlignATAC</strong></a>
-											</span>
-											<br/>
-											<span style="color:#0000ff;"><strong>Category</strong>: </span>[Cell Type Identification]
-											<br/>
-											<span style="color:#0000ff;"><strong>Description</span></strong>: Genome-and peak-informed two-stage framework for scATAC-seq cell type identification
-											<br/>
-											<span style="color:#0000ff;"><strong>Journal</strong></span>: <strong>Bioinformatics</strong>
-											<br/>
-											<span style="color:#0000ff;">
-												<strong>
-													<a href="https://doi.org/10.1093/bioinformatics/btaf682" target="_blank">DOI:</a>
-												</strong>
-											</span>&nbsp;10.1093/bioinformatics/btaf682
-											<br/>
-											<span style="color:#0000ff;"><strong>Year</strong></span>: <strong>2026</strong>
-										</span>
-                            </p>
-                        </td>
-                        <td>
-                            <img width="137" height="157"
-                                 style="border:1px solid #0000ff;border-image:none;width:137px;height:157px;padding-top:1px;padding-bottom:1px;"
-                                 src="./images/CellpredX.png" border="0" vspace="0" hspace="0"/>
-                        </td>
-                        <td width="285" style="text-align:left;">
-                            <p style="text-align:left;">
-										<span style="font-family:georgia;font-size:12px;">
-											<span style="color:#0000ff;">
-												<a style="color:#0000ff;"
-                                                   href="https://github.com/BioCS-Lab/CellPredX" target="_blank"><strong>CellPredX</strong></a>
-											</span>
-											<br/>
-											<span style="color:#0000ff;"><strong>Category</strong>: </span>[Cell Type Annotation]
-											<br/>
-											<span style="color:#0000ff;"><strong>Description</span></strong>: CellPredX, a computational framework for cross-data type, cross-sample, and cross-protocol cell type annotation through domain adaptation and deep metric learning
-											<br/>
-											<span style="color:#0000ff;"><strong>Journal</strong></span>: <strong>PLOS Computational Biology</strong>
-											<br/>
-											<span style="color:#0000ff;">
-												<strong>
-													<a href="https://doi.org/10.1371/journal.pcbi.1013824" target="_blank">DOI:</a>
-												</strong>
-											</span>&nbsp;10.1371/journal.pcbi.1013824
-											<br/>
-											<span style="color:#0000ff;"><strong>Year</strong></span>: <strong>2026</strong>
-										</span>
-                            </p>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <!-- xxxx -->
+<div class="container">
+    <div class="header">
+        <h1 id="Publications_">Bioinformatics Servers</h1>
+        <p><span class="count">10</span> Servers, Programmed by <strong>Yan Liu</strong></p>
+    </div>
 
-        </tbody>
-    </table>
+    <div class="grid">
+
+        <div class="card">
+            <div class="thumb">
+                <img src="./images/tripletcell.png" alt="TripletCell">
+            </div>
+            <div class="content">
+                <h2 class="title">
+                    <a href="https://github.com/liuyan3056/TripletCell" target="_blank">TripletCell</a>
+                </h2>
+                <div class="meta">
+                    <span class="tag">Cell Type Prediction</span>
+                    <span class="tag">2023</span>
+                </div>
+                <div class="info"><span class="label">Description:</span> TripletCell: a deep metric learning framework for accurate annotation of cell types at the single-cell level</div>
+                <div class="info"><span class="label">Journal:</span> <strong>Briefings in Bioinformatics</strong></div>
+                <div class="info doi"><span class="label">DOI:</span> <a href="https://doi.org/10.1093/bib/bbad132" target="_blank">10.1093/bib/bbad132</a></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="thumb">
+                <img src="./images/scMDR.png" alt="scMDR">
+            </div>
+            <div class="content">
+                <h2 class="title">
+                    <a href="https://github.com/LMC0705/annotate_celltype" target="_blank">scMDR</a>
+                </h2>
+                <div class="meta">
+                    <span class="tag">Cell Type Prediction</span>
+                    <span class="tag">2023</span>
+                </div>
+                <div class="info"><span class="label">Description:</span> Learning Cell Annotation under Multiple Reference Datasets by Multi-source Domain Adaptation</div>
+                <div class="info"><span class="label">Journal:</span> <strong>Journal of Chemical Information and Modeling</strong></div>
+                <div class="info doi"><span class="label">DOI:</span> <a href="https://doi.org/10.1021/acs.jcim.2c01277" target="_blank">10.1021/acs.jcim.2c01277</a></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="thumb">
+                <img src="./images/vggfold.png" alt="VGGFold">
+            </div>
+            <div class="content">
+                <h2 class="title">
+                    <a href="https://csbio.njust.edu.cn/bioinf/vggfold/" target="_blank">VGGFold</a>
+                </h2>
+                <div class="meta">
+                    <span class="tag">Protein Fold Prediction</span>
+                    <span class="tag">2021</span>
+                </div>
+                <div class="info"><span class="label">Description:</span> Why can deep convolutional neural networks improve protein fold recognition? A visual explanation by interpretation</div>
+                <div class="info"><span class="label">Journal:</span> <strong>Briefings in Bioinformatics</strong></div>
+                <div class="info doi"><span class="label">DOI:</span> <a href="https://doi.org/10.1093/bib/bbab001" target="_blank">10.1093/bib/bbab001</a></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="thumb">
+                <img src="./images/FoldTR.png" alt="FoldTR">
+            </div>
+            <div class="content">
+                <h2 class="title">
+                    <a href="https://csbio.njust.edu.cn/bioinf/foldtr/" target="_blank">FoldTR</a>
+                </h2>
+                <div class="meta">
+                    <span class="tag">Protein Fold Prediction</span>
+                    <span class="tag">2021</span>
+                </div>
+                <div class="info"><span class="label">Description:</span> Improving protein fold recognition using triplet network and ensemble deep learning</div>
+                <div class="info"><span class="label">Journal:</span> <strong>Briefings in Bioinformatics</strong></div>
+                <div class="info doi"><span class="label">DOI:</span> <a href="https://doi.org/10.1093/bib/bbab248" target="_blank">10.1093/bib/bbab248</a></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="thumb">
+                <img src="./images/SAResNet.png" alt="SAResNet">
+            </div>
+            <div class="content">
+                <h2 class="title">
+                    <a href="https://csbio.njust.edu.cn/bioinf/saresnet/" target="_blank">SAResNet</a>
+                </h2>
+                <div class="meta">
+                    <span class="tag">DNA-Protein Binding</span>
+                    <span class="tag">2021</span>
+                </div>
+                <div class="info"><span class="label">Description:</span> SAResNet: self-attention residual network for predicting DNA-protein binding</div>
+                <div class="info"><span class="label">Journal:</span> <strong>Briefings in Bioinformatics</strong></div>
+                <div class="info doi"><span class="label">DOI:</span> <a href="https://doi.org/10.1093/bib/bbab101" target="_blank">10.1093/bib/bbab101</a></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="thumb">
+                <img src="./images/TripletGO.png" alt="TripletGO">
+            </div>
+            <div class="content">
+                <h2 class="title">
+                    <a href="https://zhanggroup.org/TripletGO/" target="_blank">TripletGO</a>
+                </h2>
+                <div class="meta">
+                    <span class="tag">Protein Function Prediction</span>
+                    <span class="tag">2022</span>
+                </div>
+                <div class="info"><span class="label">Description:</span> Integrating Transcript Expression Profiles with Protein Homology Inferences for Gene Function Prediction</div>
+                <div class="info"><span class="label">Journal:</span> <strong>Genomics Proteomics Bioinformatics</strong></div>
+                <div class="info doi"><span class="label">DOI:</span> <a href="https://doi.org/10.1016/j.gpb.2022.03.001" target="_blank">10.1016/j.gpb.2022.03.001</a></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="thumb">
+                <img src="./images/NPCFold.png" alt="NPCFold">
+            </div>
+            <div class="content">
+                <h2 class="title">
+                    <a href="https://github.com/zhuguanyu123/NPCFold" target="_blank">NPCFold</a>
+                </h2>
+                <div class="meta">
+                    <span class="tag">Protein Fold Recognition</span>
+                    <span class="tag">2022</span>
+                </div>
+                <div class="info"><span class="label">Description:</span> Learning Protein Embedding to Improve Protein Fold Recognition Using Deep Metric Learning</div>
+                <div class="info"><span class="label">Journal:</span> <strong>Journal of Chemical Information and Modeling</strong></div>
+                <div class="info doi"><span class="label">DOI:</span> <a href="https://doi.org/10.1021/acs.jcim.2c00959" target="_blank">10.1021/acs.jcim.2c00959</a></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="thumb">
+                <img src="./images/GMPGRN.png" alt="GMFGRN">
+            </div>
+            <div class="content">
+                <h2 class="title">
+                    <a href="https://github.com/Truth123/GCmapCrys" target="_blank">GMFGRN</a>
+                </h2>
+                <div class="meta">
+                    <span class="tag">Gene Regulatory Network Inference</span>
+                    <span class="tag">2023</span>
+                </div>
+                <div class="info"><span class="label">Description:</span> GMFGRN: a matrix factorization and graph neural network approach for gene regulatory network inference</div>
+                <div class="info"><span class="label">Journal:</span> <strong>Briefings in Bioinformatics</strong></div>
+                <div class="info doi"><span class="label">DOI:</span> <a href="https://doi.org/10.1093/bib/bbad529" target="_blank">10.1093/bib/bbad529</a></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="thumb">
+                <img src="./images/seqalign.png" alt="seqAlignATAC">
+            </div>
+            <div class="content">
+                <h2 class="title">
+                    <a href="https://github.com/BioCS-Lab/seqAlignATAC" target="_blank">seqAlignATAC</a>
+                </h2>
+                <div class="meta">
+                    <span class="tag">Cell Type Identification</span>
+                    <span class="tag">2026</span>
+                </div>
+                <div class="info"><span class="label">Description:</span> Genome-and peak-informed two-stage framework for scATAC-seq cell type identification</div>
+                <div class="info"><span class="label">Journal:</span> <strong>Bioinformatics</strong></div>
+                <div class="info doi"><span class="label">DOI:</span> <a href="https://doi.org/10.1093/bioinformatics/btaf682" target="_blank">10.1093/bioinformatics/btaf682</a></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="thumb">
+                <img src="./images/CellpredX.png" alt="CellPredX">
+            </div>
+            <div class="content">
+                <h2 class="title">
+                    <a href="https://github.com/BioCS-Lab/CellPredX" target="_blank">CellPredX</a>
+                </h2>
+                <div class="meta">
+                    <span class="tag">Cell Type Annotation</span>
+                    <span class="tag">2026</span>
+                </div>
+                <div class="info"><span class="label">Description:</span> CellPredX, a computational framework for cross-data type, cross-sample, and cross-protocol cell type annotation through domain adaptation and deep metric learning</div>
+                <div class="info"><span class="label">Journal:</span> <strong>PLOS Computational Biology</strong></div>
+                <div class="info doi"><span class="label">DOI:</span> <a href="https://doi.org/10.1371/journal.pcbi.1013824" target="_blank">10.1371/journal.pcbi.1013824</a></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-note">
+        Academic server collection for bioinformatics research
+    </div>
 </div>
 </body>
 </html>
